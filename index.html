@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Satti Studio — Websites for the city's finest</title>
+<meta name="description" content="One home for the businesses we craft websites for: salons, gyms, dining and clinics across Islamabad, Rawalpindi and Lahore.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#111111; --cream:#f7f5f0; --paper:#f1efe8; --line:#e7e5e0;
+  --gold:#c6a15b; --dim:#6b675f; --white:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Space Grotesk',sans-serif;background:var(--cream);color:var(--ink);font-weight:300;line-height:1.6}
+.const{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3,.serif{font-family:'Fraunces',serif;font-weight:300;letter-spacing:-0.01em}
+.eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-family:'Space Grotesk'}
+a{color:inherit;text-decoration:none}
+nav{position:sticky;top:0;z-index:50;background:rgba(247,245,240,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .const{display:flex;align-items:center;justify-content:space-between;padding:16px 24px}
+.brand{font-family:'Fraunces';font-size:19px;letter-spacing:-.01em}
+.brand b{font-weight:400}
+nav ul{display:flex;gap:26px;list-style:none;font-size:13px}
+nav ul a:hover{color:var(--gold)}
+.hero{background:var(--ink);color:var(--cream)}
+.hero .const{padding:110px 24px 90px;text-align:center}
+.hero h1{font-size:clamp(38px,6vw,74px);line-height:1.04;font-weight:300}
+.hero h1 em{font-style:italic;color:#f0e6d2}
+.hero p{max-width:600px;margin:22px auto 0;color:#c9c5bb;font-size:16px}
+.cta{display:inline-block;margin-top:34px;border:1px solid var(--gold);color:var(--gold);padding:13px 34px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;transition:.25s}
+.cta:hover{background:var(--gold);color:var(--ink)}
+.marq{background:var(--ink);border-top:1px solid #2a2a2a;overflow:hidden}
+.marq .track{display:flex;gap:0;white-space:nowrap;animation:roll 32s linear infinite;width:max-content}
+.marq span{font-family:'Fraunces';font-style:italic;font-size:20px;color:var(--gold);padding:16px 26px;opacity:.9}
+@keyframes roll{to{transform:translateX(-50%)}}
+section{padding:84px 0}
+.sec-head{margin-bottom:46px}
+.sec-head h2{font-size:clamp(30px,4.4vw,52px);margin-top:10px}
+.sec-head h2 em{font-style:italic;color:var(--gold)}
+.sec-head p{max-width:520px;color:var(--dim);margin-top:12px;font-size:14px}
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cat{border:1px solid var(--line);background:var(--paper);padding:26px;transition:.25s}
+.cat:hover{border-color:var(--gold)}
+.cat .n{font-family:'Fraunces';font-size:40px;color:var(--gold);font-weight:300}
+.cat h3{font-size:17px;margin:8px 0 4px}
+.cat p{font-size:12px;color:var(--dim)}
+.rail{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--white);border:1px solid var(--line);padding:30px;display:flex;flex-direction:column;gap:8px;transition:.25s}
+.card:hover{transform:translateY(-3px);box-shadow:0 18px 40px -22px rgba(17,17,17,.35);border-color:var(--gold)}
+.card .eyebrow{font-size:10px}
+.card h3{font-size:21px;line-height:1.25}
+.card p{font-size:13px;color:var(--dim);flex:1}
+.card .row{display:flex;justify-content:space-between;align-items:center;font-size:12px}
+.card .score{color:var(--gold);font-weight:400}
+.band{background:var(--ink);color:var(--cream)}
+.band .const{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.step{border-top:1px solid #2a2a2a;padding-top:20px}
+.step .k{font-family:'Fraunces';font-style:italic;color:var(--gold);font-size:15px}
+.step h3{font-size:19px;margin:6px 0}
+.step p{color:#b9b5aa;font-size:13px}
+.CTA{color:var(--white);width:100%;background:var(--ink);padding:0}
+.CTA .const{padding:110px 24px;text-align:center}
+.CTA h2{font-size:clamp(32px,5vw,60px)}
+.CTA h2 em{font-style:italic;color:var(--gold)}
+.CTA p{color:#b9b5aa;margin:18px auto 0;max-width:520px;font-size:14px}
+footer{border-top:1px solid var(--line);padding:34px 0;font-size:12px;color:var(--dim)}
+footer .const{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:900px){
+  .cats{grid-template-columns:repeat(2,1fr)}
+  .rail{grid-template-columns:repeat(2,1fr)}
+  .band .const{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .cats,.rail{grid-template-columns:1fr}
+  nav ul{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="const">
+    <div class="brand">Satti Studio <b>· Crafted for the city’s finest</b></div>
+    <ul>
+      <li><a href="#work">The Work</a></li>
+      <li><a href="#craft">The Craft</a></li>
+      <li><a href="#get">Get Yours</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="const">
+    <div class="eyebrow">Islamabad · Rawalpindi · Lahore</div>
+    <h1>Websites for the<br><em>businesses this city</em> loves.</h1>
+    <p>One showcase. Ten real businesses. Every site built mobile-first, wired with WhatsApp, and live within days.</p>
+    <a class="cta" href="#work">See the Showcase</a>
+  </div>
+</header>
+
+<div class="marq"><div class="track" id="marq">
+  <span>Flora Beauty ✦</span><span>Oxygen Gym ✦</span><span>CANVAS Salon ✦</span><span>Savour Foods ✦</span><span>The Dome ✦</span><span>Rose Palace Gym ✦</span><span>Structure Health ✦</span><span>Hameed Latif ✦</span><span>1969 Restaurant ✦</span><span>Vanguard Arena ✦</span><span>Flora Beauty ✦</span><span>Oxygen Gym ✦</span><span>CANVAS Salon ✦</span><span>Savour Foods ✦</span><span>The Dome ✦</span><span>Rose Palace Gym ✦</span><span>Structure Health ✦</span><span>Hameed Latif ✦</span><span>1969 Restaurant ✦</span><span>Vanguard Arena ✦</span>
+</div></div>
+
+<section id="work">
+  <div class="const">
+    <div class="sec-head">
+      <div class="eyebrow">The Showcase</div>
+      <h2>One website for the <em>businesses we build for.</em></h2>
+      <p>A single home for salons, gyms, dining and clinics across three cities — each card is a real business Satti Studio has crafted a site for.</p>
+    </div>
+    <div class="cats">
+      <div class="cat"><div class="n">03</div><h3>Salons</h3><p>Rawalpindi · Lahore</p></div>
+      <div class="cat"><div class="n">03</div><h3>Gyms</h3><p>Islamabad · Lahore</p></div>
+      <div class="cat"><div class="n">03</div><h3>Dining</h3><p>Islamabad</p></div>
+      <div class="cat"><div class="n">01</div><h3>Clinic</h3><p>Lahore</p></div>
+    </div>
+    <div class="rail" style="margin-top:34px">
+
+      <div class="card">
+        <div class="eyebrow">Salon · Rawalpindi</div>
+        <h3>Flora Beauty Salon &amp; Academy</h3>
+        <p>A full academy + salon presence — services, bridal bookings and a WhatsApp-first contact flow.</p>
+        <div class="row"><span>beauty</span><span class="score">★ 4.9</span></div>
+      </div>
+
+      <div class="card">
+        <div class="eyebrow">Salon · Lahore</div>
+        <h3>CANVAS</h3>
+        <p>Signature salon studio site — editorial look, seasonal offers and online booking.</p>
+        <div class="row"><span>beauty</span><span class="score">★ 4.9</span></div>
+      </div>
+
+      <div class="card">
+        <div class="eyebrow">Salon · Rawalpindi</div>
+        <h3>Pretty Beauty Salon</h3>
+        <p>Bridal &amp; party makeup showcase with gallery, pricing and one-tap WhatsApp booking.</p>
+        <div class="row"><span>beauty</span><span class="score">★ 4.9</span></div>
+      </div>
+
+      <div class="card">
+        <div class="eyebrow">Gym · Islamabad</div>
+        <h3>Oxygen Gym</h3>
+        <p>High-energy gym landing — programs, class timings and membership enquiries.</p>
+        <div class="row"><span>fitness</span><span class="score">★ 4.8</span></div>
+      </div>
+
+      <div class="card">
+        <div class="eyebrow">Gym · Lahore</div>
+        <h3>Rose Palace Gym</h3>
+        <p>Health &amp; fitness site for Gulberg — trainer lineup, transformation stories and free trial CTA.</p>
+        <div class="row"><span>fitness</span><span class="score">★ 4.8</span></div>
+      </div>
+
+      <div class="card">
+        <div class="eyebrow">Gym · Lahore</div>
+        <h3>Structure Health &amp; Fitness</h3>
+        <p>Multi-branch strength &amp; conditioning site with location finder and membership plans.</p>
+        <div class="row"><span>fitness</span><span class="score">★ 4.7</span></div>
+      </div>
+
+      <div class="card">
+        <div class="eyebrow">Dining · Islamabad</div>
+        <h3>Savour Foods</h3>
+        <p>Restaurant grill house — menus, branches and reservations hooked straight to WhatsApp.</p>
+        <div class="row"><span>dining</span><span class="score">★ 4.5</span></div>
+      </div>
+
+      <div class="card">
+        <div class="eyebrow">Dining · Islamabad</div>
+        <h3>The Dome</h3>
+        <p>Premium dining experience — elegant menu pages, private events and table booking.</p>
+        <div class="row"><span>dining</span><span class="score">★ 4.6</span></div>
+      </div>
+
+      <div class="card">
+        <div class="eyebrow">Dining · Islamabad</div>
+        <h3>1969 Restaurant</h3>
+        <p>Heritage grill house — nostalgic brand story, signature dishes and delivery links.</p>
+        <div class="row"><span>dining</span><span class="score">★ 4.5</span></div>
+      </div>
+
+      <div class="card">
+        <div class="eyebrow">Clinic · Lahore</div>
+        <h3>Hameed Latif Hospital</h3>
+        <p>Trust-first healthcare presence — departments, specialists and clinic hours.</p>
+        <div class="row"><span>clinic</span><span class="score">★ 4.5</span></div>
+      </div>
+
+      <div class="card">
+        <div class="eyebrow">Gym · Islamabad</div>
+        <h3>Vanguard Arena Gym</h3>
+        <p>High-performance athletic centre — coaching, classes and corporate memberships.</p>
+        <div class="row"><span>fitness</span><span class="score">★ 4.9</span></div>
+      </div>
+
+      <div class="card">
+        <div class="eyebrow">Dining · Islamabad</div>
+        <h3>El Momento</h3>
+        <p>Contemporary café &amp; restaurant — moody visual storytelling and live reservations.</p>
+        <div class="row"><span>dining</span><span class="score">★ 4.5</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="craft" class="band">
+  <div class="const">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:var(--gold)">The Craft</div>
+      <h2 style="color:var(--cream)">How every site <em>gets built.</em></h2>
+    </div>
+    <div class="band">
+      <div class="const" style="grid-template-columns:repeat(3,1fr)">
+        <div class="step"><div class="k">01 — Mobile first</div><h3>Customers are on phones.</h3><p>Every page is engineered for the pocket — fast, thumb-friendly, beautiful at any size.</p></div>
+        <div class="step"><div class="k">02 — WhatsApp built in</div><h3>The button your city clicks.</h3><p>One tap from any page lands a customer in your WhatsApp. No forms, no friction.</p></div>
+        <div class="step"><div class="k">03 — Live in days</div><h3>From start to launch.</h3><p>A clean site with your photos, your services and your story — typically live in 3–5 days.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="get" class="CTA">
+  <div class="const">
+    <div class="eyebrow">Your business could be next</div>
+    <h2>Your name <em>belongs here.</em></h2>
+    <p>If you run a salon, gym, restaurant or clinic and the city can’t find you on Google — that’s the entire problem we solve.</p>
+    <a class="cta" href="https://wa.me/923165661622?text=Hi%20Abdul%2C%20I%20want%20a%20website%20for%20my%20business">Start Yours on WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <div class="const">
+    <div class="brand">Satti Studio</div>
+    <div>Islamabad · Rawalpindi · Lahore — <a href="https://satti-web-studio.vercel.app" style="color:var(--gold)">portfolio</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
