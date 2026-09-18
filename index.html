@@ -20,11 +20,17 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--cream);color:var(--
 h1,h2,h3,.serif{font-family:'Fraunces',serif;font-weight:300;letter-spacing:-0.01em}
 .eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-family:'Space Grotesk'}
 a{color:inherit;text-decoration:none}
-nav{position:sticky;top:0;z-index:50;background:rgba(247,245,240,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{position:sticky;top:0;z-index:50;background:rgba(247,245,240,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);animation:navIn .7s cubic-bezier(.2,.7,.2,1) both}
+@keyframes navIn{from{transform:translateY(-100%);opacity:0}to{transform:none;opacity:1}}
 nav .const{display:flex;align-items:center;justify-content:space-between;padding:16px 24px}
-.brand{font-family:'Fraunces';font-size:19px;letter-spacing:-.01em}
+.brand{font-family:'Fraunces';font-size:19px;letter-spacing:-.01em;display:flex;align-items:center;gap:11px}
+.brand .logo{width:34px;height:34px;flex:none;animation:logoPop .6s .25s cubic-bezier(.34,1.56,.64,1) both}
+@keyframes logoPop{from{opacity:0;transform:scale(.4) rotate(-14deg)}to{opacity:1;transform:none}}
 .brand b{font-weight:400}
 nav ul{display:flex;gap:26px;list-style:none;font-size:13px}
+nav ul a{position:relative;padding-bottom:4px}
+nav ul a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s ease}
+nav ul a:hover::after{width:100%}
 nav ul a:hover{color:var(--gold)}
 .hero{background:var(--ink);color:var(--cream)}
 .hero .const{padding:110px 24px 90px;text-align:center}
@@ -84,7 +90,7 @@ footer .const{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px
 
 <nav>
   <div class="const">
-    <div class="brand">Satti Studio <b>· Crafted for the city’s finest</b></div>
+    <div class="brand"><svg class="logo" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="9" fill="#111"/><text x="17" y="23" text-anchor="middle" font-family="Georgia,serif" font-size="15" fill="#C6A15B">SS</text></svg><span>Satti Studio</span> <b>· Crafted for the city’s finest</b></div>
     <ul>
       <li><a href="#work">The Work</a></li>
       <li><a href="#craft">The Craft</a></li>
